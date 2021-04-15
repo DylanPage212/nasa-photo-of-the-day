@@ -19,7 +19,7 @@ useEffect(() => {
 
    return (
         <div className="Nasa">
-            <p>Hello</p>
+            <img src={data.url}></img>
         </div> );
     
 };
