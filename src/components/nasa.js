@@ -1,9 +1,18 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import styled from "styled-components";
 
 function Nasa() {
 
 const [data, setData] = useState("");
+
+
+const ImageStyle = styled.img`
+border: 5px solid black;
+&:hover {
+    padding: 5px;
+}
+`
 
 useEffect(() => {
     axios
@@ -19,7 +28,7 @@ useEffect(() => {
 
    return (
         <div className="Nasa">
-            <img src={data.url}></img>
+            <ImageStyle src={data.url}></ImageStyle>
         </div> );
     
 };
